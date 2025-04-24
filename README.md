@@ -23,12 +23,14 @@ Gosu is an open-source, statically-typed object oriented programming language th
 ### ✍️ Core Concepts of Gosu
 
 #### 1. **Type Inference**
+Gosu can automatically determine the type of a variable based on its assigned value. This simplifies declarations while maintaining type safety.
 
 ```gosu
 var name = "Abhishek"  // Gosu infers String type
 ```
 
 #### 2. **Enhancements** (Extension methods)
+Enhancements allow you to add new methods to existing types without modifying the original class. They're similar to extension methods in other languages.
 
 ```gosu
 enhancement MyStringEnhancement : String {
@@ -39,6 +41,7 @@ enhancement MyStringEnhancement : String {
 ```
 
 #### 3. **Named Arguments & Default Parameters**
+Named arguments make function calls more readable. You can also define default parameter values for optional arguments.
 
 ```gosu
 function printNames(prefix : String = "> ") {
@@ -51,6 +54,7 @@ c.printNames(:prefix = "* ")
 ```
 
 #### 4. **Delegates**
+Delegation allows a class to fulfill an interface using another internal object. This promotes composition over inheritance.
 
 ```gosu
 class MyRunnable implements Runnable {
@@ -73,6 +77,7 @@ x.run()  // Output: Hello, Delegation
 ```
 
 #### 5. **List Enhancements**
+You can extend collection types to include utility methods.
 
 ```gosu
 enhancement ListEnhancement<T> : List<T> {
@@ -83,6 +88,7 @@ enhancement ListEnhancement<T> : List<T> {
 ```
 
 #### 6. **Date Enhancements**
+Enhancements for dates help simplify common calculations.
 
 ```gosu
 enhancement DateEnhancement : Date {
@@ -94,6 +100,7 @@ enhancement DateEnhancement : Date {
 ```
 
 #### 7. **Blocks and Closures**
+Gosu supports inline function blocks, similar to lambdas.
 
 ```gosu
 var names = {"Alice", "Bob", "Charlie"}
@@ -101,20 +108,21 @@ var filtered = names.where(\ name -> name.startsWith("A") )
 ```
 
 #### 8. **Structures and Typelists**
-- Used in Guidewire for defining standard values like "State", "ClaimStatus", etc.
-- Helps in localization and business logic constraints
+Used in Guidewire for defining controlled vocabularies (e.g., "State", "ClaimStatus"). They enable localization and enforce valid values.
 
 #### 9. **Bundles and Transactions**
-- Used for managing data persistence in Guidewire
-- Example: `Bundle`, `commit()`, `remove()`, `add()`
-- Ensures data consistency during DB operations
+Used for grouping and managing data operations. Ensures atomicity and consistency in database operations.
+
+- `Bundle`, `commit()`, `remove()`, `add()`
 
 #### 10. **Gosu Templates (`.gsp` files)**
-- Used for generating PDFs, letters, and formatted output
-- Contains dynamic expressions and loops
-- Looks like HTML + Gosu syntax
+Gosu Server Pages are templating files for generating dynamic documents such as PDFs and emails. They support embedding Gosu logic into markup.
+
+- Supports loops, conditions, and expressions
+- Similar to JSP or Razor syntax
 
 #### 11. **Unit Testing in Gosu**
+Gosu supports unit testing through `TestClass`, enabling automated test execution.
 
 ```gosu
 uses gw.test.TestClass
@@ -126,24 +134,23 @@ class MyTestClass extends TestClass {
 ```
 
 #### 12. **Type Loaders**
-- Gosu supports custom and built-in Type Loaders
-- Used to load metadata and external types dynamically
+Type Loaders are mechanisms for dynamically loading types from external data sources. They can be custom or built-in.
 
 ---
 
 ### ⚙️ Gosu in Guidewire
 
 - Used in PolicyCenter, BillingCenter, ClaimCenter
-- Gosu code executes business rules, workflows, validation
-- Guidewire Studio provides syntax highlighting and debugging support for Gosu
+- Executes business rules, workflows, validations
+- Guidewire Studio supports Gosu with code navigation and debugging
 
 ---
 
 ### 📄 Gosu API Usage
 
-- Gosu can interact with Java classes directly
-- Can consume REST APIs using Java libraries
-- Easily integrates with Guidewire's internal APIs
+- Seamless integration with Java classes
+- Can call external REST APIs using Java libraries
+- Can use Guidewire's internal web service APIs
 
 ---
 
