@@ -193,9 +193,7 @@ class MyTestClass extends TestClass {
    - Gosu templates are .gsp (Gosu Server Pages) files that combine HTML with embedded Gosu code to generate dynamic content. These templates are mainly used for creating documents such as policy letters, 
      billing statements, and emails in Guidewire applications. They allow developers to iterate over data, include conditions, and format content programmatically, much like JSP or Razor templates in other 
      ecosystems.
-
-
-
+     
 ---
 
 ### 🎓 Summary
