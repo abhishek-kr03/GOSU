@@ -4,7 +4,7 @@
 
 ### 💡 What is Gosu?
 
-Gosu is an open-source, statically-typed programming language that runs on the Java Virtual Machine (JVM). It was created to simplify complex business logic and provide an expressive syntax while maintaining type safety.
+Gosu is an open-source, statically-typed object oriented programming language that runs on the Java Virtual Machine (JVM). It was created to simplify complex business logic and provide an expressive syntax while maintaining type safety.
 
 ---
 
